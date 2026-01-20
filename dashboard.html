@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReadStack Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" href="image.png">
+</head>
+<body>
+<nav>
+  <h2>ReadStack</h2>
+
+  <div class="nav-right">
+    <div class="home-dropdown">
+      <span id="homeIcon">🏠</span>
+      <div class="dropdown-content" id="dropdownMenu">
+        <p id="profile">Profile</p>
+        <p id="logoutBtn">Logout</p>
+      </div>
+    </div>
+    <span id="welcomeUser"></span>
+  </div>
+</nav>
+<div class="dashboard">
+  <div class="books-wrapper">
+    <h3>My Books</h3>
+
+    <label for="statusFilter">Filter by Status</label>
+    <select id="statusFilter">
+      <option value="All">All</option>
+      <option value="Reading">Reading</option>
+      <option value="Completed">Completed</option>
+      <option value="Want to Read">Want to Read</option>
+    </select>
+    <div id="bookList"></div>
+  </div>
+</div>
+<button id="addBookBtn" class="floating-add-btn">+</button>
+<div id="addBookModal" class="modal">
+  <div class="modal-content">
+    <span id="closeAddModal" class="close-btn">&times;</span>
+    <h3>Add a Book</h3>
+
+    <form id="bookForm">
+      <input id="bookTitle" placeholder="Book Title" required>
+      <input id="bookAuthor" placeholder="Author" required>
+      <input id="bookSeries" placeholder="Series (optional)">
+      <input id="bookNumber" type="number" placeholder="Book Number (optional)">
+      <input id="bookGenre" placeholder="Genre (optional)">
+      <select id="bookStatus" required>
+        <option value="">Select Status</option>
+        <option>Reading</option>
+        <option>Completed</option>
+        <option>Want to Read</option>
+      </select>
+      <textarea id="bookNotes" placeholder="Notes (optional)"></textarea>
+      <button type="submit">Add Book</button>
+    </form>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

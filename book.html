@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReadStack - Book Details</title>
+  <link rel="stylesheet" href="book.css">
+  <link rel="icon" type="image/png" href="image.png">
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <h2>ReadStack</h2>
+    </div>
+    <div class="nav-right">
+      <span id="homeIcon">🏠</span>
+      <div class="dropdown-content" id="dropdownMenu">
+        <p id="profileBtn">Profile</p>
+        <p id="logoutBtn">Logout</p>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <span id="backArrow">⬅️ Back to Dashboard</span>
+    <div class="book-info-card">
+      <h3 id="bookTitle"></h3>
+      <p><strong>Author:</strong> <span id="bookAuthor"></span></p>
+      <p><strong>Series:</strong> <span id="bookSeries"></span></p>
+      <p><strong>Book #:</strong> <span id="bookNumber"></span></p>
+      <p><strong>Genre:</strong> <span id="bookGenre"></span></p>
+      <p><strong>Status:</strong> <span id="bookStatus"></span></p>
+      <p><strong>Notes:</strong> <span id="bookNotes"></span></p>
+      <div class="actions">
+        <button id="editBtn">Edit</button>
+        <button id="deleteBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close-btn">&times;</span>
+      <h3>Edit Book</h3>
+      <form id="editBookForm">
+        <input type="text" id="editTitle" placeholder="Book Title" required>
+        <input type="text" id="editAuthor" placeholder="Author" required>
+        <input type="text" id="editSeries" placeholder="Series (optional)">
+        <input type="number" id="editNumber" placeholder="Book Number (optional)">
+        <input type="text" id="editGenre" placeholder="Genre (optional)">
+        <select id="editStatus" required>
+          <option value="">Select Status</option>
+          <option value="Reading">Reading</option>
+          <option value="Completed">Completed</option>
+          <option value="Want to Read">Want to Read</option>
+        </select>
+        <textarea id="editNotes" placeholder="Notes (optional)"></textarea>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+  <script src="book.js"></script>
+</body>
+</html>

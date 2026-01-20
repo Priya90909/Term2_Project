@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ReadStack Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="icon" type="image/png" href="image.png">
+
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <h2>ReadStack</h2>
+    </div>
+    <div class="nav-right">
+      <div class="home-dropdown">
+        <span id="homeIcon">🏠</span>
+        <div class="dropdown-content" id="dropdownMenu">
+          <p id="dashboardBtn">Dashboard</p>
+          <p id="logoutBtn">Logout</p>
+        </div>
+      </div>
+      <span id="welcomeUser"></span>
+    </div>
+  </nav>
+  <div class="profile-container">
+    <div class="profile-left">
+      <h2 id="profileUsername"></h2>
+      <p id="userLevel"></p>
+
+      <div class="stat">
+        <span>Completed</span>
+        <span id="completedCount">0</span>
+      </div>
+      <div class="stat">
+        <span>Reading</span>
+        <span id="readingCount">0</span>
+      </div>
+      <div class="stat">
+        <span>Want to Read</span>
+        <span id="wantCount">0</span>
+      </div>
+      <div class="level-container">
+        <p>Progress to next level:</p>
+        <div class="level-bar">
+          <div id="levelProgress"></div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-right">
+      <button id="togglePasswordBtn">Change Password</button>
+
+      <form id="passwordForm">
+        <input type="password" id="oldPassword" placeholder="Current Password" required>
+        <input type="password" id="newPassword" placeholder="New Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm New Password" required>
+        <button type="submit">Update Password</button>
+        <p id="passwordMsg"></p>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
