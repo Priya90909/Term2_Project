@@ -95,3 +95,10 @@ Event-driven UI updates
 Popup modals using JS-controlled visibility
 
 Navigation between pages using JavaScript
+
+
+PS:
+
+To make it easier for you, if you wanna get a demo of the page you can log in through this account:
+Username: User;
+Password: qwe!@#123
